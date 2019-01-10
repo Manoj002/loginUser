@@ -47,7 +47,9 @@ class LoginForm extends React.Component {
 
     render() {
         return(
-            <Card>
+            <View
+                style={styles.container}
+            >
                 <CardSection>
                     <Input 
                         label="Email"
@@ -74,7 +76,7 @@ class LoginForm extends React.Component {
                 <CardSection>
                     {this.renderButton()}
                 </CardSection>
-            </Card>
+            </View>
         )
     }
 }
@@ -86,6 +88,16 @@ const mapStateToProps = ({ auth }) => {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        elevation: 1,
+        zIndex: 99,
+        height: 400,
+        width: "90%",
+        marginLeft: 20,
+        marginRight: 20
+    },
     errorTextStyle: {
         fontSize: 20,
         alignSelf: 'center',
